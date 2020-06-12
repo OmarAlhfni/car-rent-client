@@ -1,0 +1,64 @@
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 15px;
+  background: #f6f6f6;
+}
+
+.navLogo {
+  width: 180px;
+  height: 70px;
+  cursor: pointer;
+}
+
+.navUL {
+  list-style-type: none;
+  margin-left: 200px;
+}
+
+.navLi {
+  display: inline;
+  margin-left: 20px;
+  cursor: pointer;
+  color: #6a52fe;
+  font-weight: bold;
+}
+
+.linkColor {
+  color: #6a52fe;
+}
+
+.navLogin,
+.navRegister {
+  margin-left: 20px;
+  width: 90px;
+  height: 40px;
+  background: none;
+  border: 1px solid #6a52fe;
+  border-radius: 0.25em;
+  font-weight: bold;
+  padding: 7px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.navLogin {
+  background-color: #6a52fe;
+  color: #fff;
+}
+
+.navRegister {
+  color: #6a52fe;
+}
+
+.navLR {
+  display: flex;
+  flex-direction: row;
+}
+
+.navIcon {
+  padding: 15px 5px;
+  color: #6a52fe;
+  font-size: 20px;
+}

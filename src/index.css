@@ -1,0 +1,75 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* height: 10000px; */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.title {
+  color: #6a52fe;
+}
+
+.titleSpan {
+  color: #000;
+}
+
+.Line {
+  font-weight: 900;
+  font-size: 24px;
+  padding: 20px;
+  color: #6a52fe;
+}
+
+.error {
+  color: #f00;
+}
+
+.success {
+  color: #6a52fe;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 30px;
+  font-family: fantasy;
+  color: #6a52fe;
+}
+
+.slick-prev {
+  left: auto;
+  right: 15px;
+}
+
+.slick-prev,
+.slick-next {
+  left: auto;
+  top: 100%;
+  width: 30px;
+  height: 30px;
+}

@@ -1,0 +1,25 @@
+.wayRent{
+    text-align: center;
+    height: 640px;
+    padding: 20px;
+    box-shadow: 0 5px 61px -13px #6a52fe;
+}
+
+.subTitle, .WRCSubTitle{
+    width: 50%;
+    margin: auto;
+    color: #777;
+}
+
+.wayRentComponent{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    padding-top: 50px;
+}
+
+.WRCSubTitle{
+    width: 80%;
+}

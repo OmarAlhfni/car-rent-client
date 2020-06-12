@@ -1,0 +1,30 @@
+.about {
+  text-align: center;
+  /* width: 80%; */
+  margin: auto;
+  padding: 50px 0;
+  /* background: #eee; */
+  background: #f6f6f6;
+}
+
+.aboutP {
+  color: #707070;
+  width: 70%;
+  margin: 1em auto;
+}
+
+.aboutService{
+    margin-top: 50px;
+}
+
+.aboutService {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 89%;
+  margin: auto;
+}
+
+.aboutServiceImg {
+  width: 70px;
+}

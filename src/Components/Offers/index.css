@@ -1,0 +1,44 @@
+.offer {
+  text-align: center;
+  box-shadow: 0 5px 61px -13px #6a52fe;
+  padding: 50px 0;
+}
+
+.offerSlider {
+  padding: 50px;
+  width: 80%;
+  margin: auto;
+}
+
+.subTitle {
+  color: #777;
+  /* margin-bottom: 70px ; */
+}
+
+/* card */
+
+.offerImg{
+  height: 200px;
+}
+
+
+.offerImg > img {
+  width: 300px;
+  /* height: 300px; */
+  margin: auto;
+}
+
+.offerCard {
+  padding: 7px;
+}
+
+.OfferNumber {
+  text-align: left;
+  margin-left: 185px;
+}
+
+.OfferNumber > span {
+  color: #6a52fe;
+  font-size: 18px;
+  font-weight: bold;
+}

@@ -1,0 +1,134 @@
+.carBook {
+  /* width: 70%;
+  margin: 50px auto; */
+  display: flex;
+  width: 100%;
+}
+
+/* ***********************  Car Info  *********************** */
+.carInfo {
+  width: 40%;
+  background: #e6e6e6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 5px 5px 15px 17px;
+  border-bottom-right-radius: 80%;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  box-shadow: 4px 5px 20px -10px #6a52fe;
+  overflow: hidden;
+}
+
+.carInfoImg {
+  width: 100%;
+  height: 300px;
+  padding: 15px;
+}
+
+.carInfoInfo {
+  /* width: 50%; */
+  padding: 0 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.carInfoTitle {
+  width: 100%;
+  color: #6a52fe;
+  text-align: center;
+  text-transform: capitalize;
+  text-decoration: underline;
+}
+
+.carInfoInfo > p {
+  margin: 0;
+  padding: 5px;
+  width: 50%;
+}
+
+.carInfoprice {
+  color: #6a52fe;
+  font-weight: bold;
+  font-size: 20px;
+  width: 100%;
+  display: block;
+}
+
+/* ***********************  Car Booking  *********************** */
+.carBooking {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 6px 30px;
+  width: 60%;
+}
+
+.CBFull {
+  width: 100%;
+}
+
+.CBFull > input {
+  width: 100%;
+}
+
+.CBHalf {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.CBHalf > label {
+  width: 50%;
+}
+
+.CBHRight {
+  width: 50%;
+}
+
+.CBHleft {
+  width: 48%;
+}
+
+.CBDText {
+  width: 100%;
+}
+
+.CBlabel {
+  color: #6a52fe;
+  /* margin-top: 15px; */
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.CBInput {
+  height: 33px;
+  margin: 5px 0 10px;
+  border-radius: 7px;
+  border: 1px solid #6a52fe;
+  outline: none;
+  font-size: 18px;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+.CBText {
+  width: 100%;
+  height: 100px;
+}
+
+.CBBtn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: #6a52fe;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 0.2em;
+  margin: 20px 0;
+  cursor: pointer;
+}
