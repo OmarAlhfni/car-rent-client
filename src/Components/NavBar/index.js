@@ -11,7 +11,7 @@ class NavBar extends Component {
   }
   renderRegister = () => {
     const { isAuth, logOut } = this.props;
-    if (!isAuth) {
+    if (isAuth) {
       return (
         <div className="navLR">
           <div className="navIcons">
