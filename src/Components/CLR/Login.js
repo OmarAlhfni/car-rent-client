@@ -15,7 +15,7 @@ class Login extends Component {
     password: "",
   };
 
-  _onChang = (e) => {
+  onChange = (e) => {
     this.setState({
       [e.target.name]: e.target.value,
     });
@@ -38,41 +38,45 @@ class Login extends Component {
     const { email, password } = this.state;
 
     return (
-      <div className="contentForms">
-        <form className="formInputs" onSubmit={this._onSubmit}>
-          <h2 className="formInputsTitle">Login</h2>
+      <div className="c-l-r-content">
+        <div className="contentContainer">
 
-          <label className="formInputsLab"> E-mail</label>
-          <input
-            className="formInput"
-            name="email"
-            onChange={this._onChang}
-            value={email}
-            type="email"
-            required
+          <form className="contentForm" onSubmit={this._onSubmit}>
+            <h2 className="contentFormTitle">Login</h2>
+
+            <label className="contentFormLab"> E-mail</label>
+            <input
+              className="formInput"
+              name="email"
+              onChange={this.onChange}
+              value={email}
+              type="email"
+              required
             // autocomplete="off"
+            />
+
+            <label className="contentFormLab">Password</label>
+            <input
+              className="formInput"
+              name="password"
+              onChange={this.onChange}
+              value={password}
+              type="password"
+              required
+            />
+
+            <p className="contentFormLab">Forget password ?</p>
+
+            <button className="contentFormBtn"> Login </button>
+          </form>
+          {/* <div className="contentGridLayer"></div> */}
+
+          <img
+            src="./img/login.png"
+            alt="img login"
+            className="contentImg"
           />
-
-          <label className="formInputsLab">Password</label>
-          <input
-            className="formInput"
-            name="password"
-            onChange={this._onChang}
-            value={password}
-            type="password"
-            required
-          />
-
-          <p className="formInputsLab">Forget password ?</p>
-
-          <button className="formInputsBtn"> Login </button>
-        </form>
-
-        <img
-          src="./img/login.png"
-          alt="img login"
-          className="contentFormsImg"
-        />
+        </div>
       </div>
     );
   }

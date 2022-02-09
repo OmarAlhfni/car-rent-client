@@ -1,26 +1,22 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import Slider from "react-slick";
 import { fetchCarByType, setBookingItem } from "../../actions";
-import Card from "./Component/Card";
+import CardSlider from "./Component/CardSlider";
 
 import "./index.css";
 
 class Cars extends Component {
+  state = {
+    carnetSelect: 0
+  }
   toggleType = (id) => {
     const { fetchCarByType } = this.props;
     fetchCarByType(id);
+    this.setState({ carnetSelect: --id })
   };
 
   render() {
-    var settings = {
-      infinite: false,
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      rows: 1,
-      // dots: true,
-    };
 
     const {
       carType,
@@ -30,14 +26,6 @@ class Cars extends Component {
       bookingItem,
       car,
     } = this.props;
-
-    console.log("car:", car);
-    console.log("carType:", carType);
-    console.log("isAuth:", isAuth);
-    console.log("typeOfCar:", typeOfCar);
-
-    console.log("car:", car);
-
     return (
       <div className="cars">
         <h2 className="title">
@@ -49,12 +37,12 @@ class Cars extends Component {
           services, in the tourism and business industry, stand out for their
         </p>
 
-        <div className="carsdiv">
+        <div className="carsClassificationBox">
           {carType.map((el, index) => {
             return (
               <button
                 onClick={() => this.toggleType(++index)}
-                className="carType"
+                className={index === this.state.carnetSelect ? " carType selectCarType" : "carType"}
                 key={index}
               >
                 {el.car_type}
@@ -62,22 +50,14 @@ class Cars extends Component {
             );
           })}
         </div>
-        <div className="carsSlider">
-          <Slider {...settings}>
-            {typeOfCar &&
-              typeOfCar.map((el, index) => {
-                return (
-                  <Card
-                    el={el}
-                    key={index}
-                    isAuth={isAuth}
-                    setBookingItem={setBookingItem}
-                    bookingItem={bookingItem}
-                  />
-                );
-              })}
-          </Slider>
-        </div>
+
+        <CardSlider
+          Cars={typeOfCar}
+          isAuth={isAuth}
+          setBookingItem={setBookingItem}
+          bookingItem={bookingItem}
+        />
+
         <Link to="/vehicles">
           <p className="carsNumber">
             <span>3.520 Results </span>looking for a car? choose a brand.

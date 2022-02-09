@@ -21,7 +21,7 @@ class Home extends Component {
   }
   render() {
     return (
-      <div>
+      <>
         <Landing />
         <WayRent />
         <Cars />
@@ -29,8 +29,8 @@ class Home extends Component {
         <About />
         <Connection />
         <Footer />
-        <BtnScroll />
-      </div>
+        {/* <BtnScroll /> */}
+      </>
     );
   }
 }

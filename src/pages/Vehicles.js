@@ -12,6 +12,10 @@ import { Footer, BtnScroll } from "../Components";
 import "./index.css";
 
 class Vehicles extends Component {
+  state = {
+    carnetSelect: -1
+  }
+
   componentDidMount() {
     const { fetchCar, fetchCarType } = this.props;
     fetchCar();
@@ -19,8 +23,13 @@ class Vehicles extends Component {
   }
 
   toggleType = (id) => {
-    const { fetchCarByTypeToVehicles } = this.props;
-    fetchCarByTypeToVehicles(id);
+    const { fetchCarByTypeToVehicles, fetchCar } = this.props
+    if (id === -1) {
+      fetchCar()
+      this.setState({ carnetSelect: id })
+    }
+    fetchCarByTypeToVehicles(id)
+    this.setState({ carnetSelect: --id })
   };
 
   render() {
@@ -29,19 +38,38 @@ class Vehicles extends Component {
       slidesToShow: 4,
       slidesToScroll: 1,
       rows: 2,
+      responsive: [
+        {
+          breakpoint: 900,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+          }
+        },
+        {
+          breakpoint: 620,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
     };
 
-    const { car, carType, isAuth, setBookingItem, fetchCar } = this.props;
+    const { car, carType, isAuth, setBookingItem } = this.props;
+    const { carnetSelect } = this.state;
     return (
       <div>
-        <div className="carsdiv">
-          <button className="carType" onClick={() => fetchCar()}>
+        <div className="carsClassificationBox">
+          <button
+            className={carnetSelect === -1 ? " carType selectCarType" : "carType"}
+            onClick={() => this.toggleType(-1)}>
             ALL
           </button>
           {carType.map((el, index) => {
             return (
               <button
-                className="carType"
+                className={index === carnetSelect ? " carType selectCarType" : "carType"}
                 key={index}
                 onClick={() => this.toggleType(++index)}
               >
@@ -50,10 +78,9 @@ class Vehicles extends Component {
             );
           })}
         </div>
-
         <div className="vehiclesSlider">
-          <Slider {...settings}>
-            {car.map((el, index) => {
+          {carnetSelect === -1 ?
+            car.map((el, index) => {
               return (
                 <Card
                   el={el}
@@ -62,13 +89,27 @@ class Vehicles extends Component {
                   setBookingItem={setBookingItem}
                 />
               );
-            })}
-          </Slider>
+            })
+            :
+
+            <Slider {...settings}>
+              {car.map((el, index) => {
+                return (
+                  <Card
+                    el={el}
+                    key={index}
+                    isAuth={isAuth}
+                    setBookingItem={setBookingItem}
+                  />
+                );
+              })}
+            </Slider>
+          }
         </div>
 
         <BtnScroll />
         <Footer />
-      </div>
+      </div >
     );
   }
 }

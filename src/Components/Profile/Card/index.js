@@ -22,10 +22,10 @@ const Card = ({
       <img className="myCardImg" src={el.photo} alt="bmw" />
       <div>
         <h3>{el.name} </h3>
-        <p> model: {el.model}</p>
-        <p> price: {el.price}</p>
+        {/* <p> model: {el.model}</p> */}
+        <p> <b>price:</b> {el.price}</p>
         {/* <p> available: {checks(el.available)}</p> */}
-        <p> Car Transmissions: {el.transmissions}</p>
+        {/* <p> Car Transmissions: {el.transmissions}</p> */}
         {/* <p> car_type: {el.car_model.car_type}</p>
         <p> category: {el.car_model.category}</p>
         <p> color: {el.car_model.color}</p> */}

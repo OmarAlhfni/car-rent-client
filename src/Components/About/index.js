@@ -25,6 +25,7 @@ const About = () => {
       <p className="aboutP">
         Write about your services, fleet, team and benefits.
       </p>
+      
       <div className="aboutService">
         <div>
           <img src="/img/about1.png" alt="about" className="aboutServiceImg" />

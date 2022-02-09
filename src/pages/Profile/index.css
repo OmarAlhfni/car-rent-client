@@ -7,16 +7,21 @@
 .conm {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .conmL {
   width: 35%;
+  min-width: 330px;
   display: flex;
   justify-content: space-around;
 }
 
 .conmR {
   width: 65%;
+  min-width: 330px;
+  flex-grow: 1;
 }
 
 .statProfile {
@@ -33,6 +38,7 @@
 
 .statAdd {
   width: 150px;
+  height: 40px;
   background: #6e56fe;
   color: #fff;
   border: none;
@@ -48,14 +54,22 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .statProfileComp > div {
   text-align: center;
+  min-width: 100px;
+}
+
+.statProfileComp > div > p {
+  padding: 0;
+  margin: 0;
 }
 
 .statProfileInst {
-  width: 65%;
+  /* width: 65%; */
   padding: 60px;
 }
 
@@ -197,7 +211,7 @@
   display: flex;
   padding: 5px 20px;
   flex-direction: row;
-  /* justify-content: space-between; */
+  justify-content: center;
   flex-wrap: wrap;
   margin: 5px 70px;
 }
@@ -212,6 +226,7 @@
 
 .myCard {
   width: 23%;
+  min-width: 280px;
   display: flex;
   background: #fff;
   flex-direction: column;
@@ -260,8 +275,6 @@
   background: #6c757d;
   width: 100%;
 }
-
-
 
 .cardOfferInp {
   width: 100%;
@@ -328,4 +341,18 @@
 
 .heddin {
   display: none;
+}
+
+@media only screen and (max-width: 576px) {
+  .statProfileInst {
+    padding: 60px 15px;
+  }
+  .statAdd {
+    margin: 20px auto;
+  }
+
+  .myCars {
+    padding: 5px;
+    margin: 15px;
+  }
 }

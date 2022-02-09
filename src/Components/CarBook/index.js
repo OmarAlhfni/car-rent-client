@@ -14,8 +14,10 @@ class CarBook extends Component {
     } else {
       return (
         <div className="carBook">
-          <CarInfo bookingItem={bookingItem} />
-          <CarBooking />
+          <div className="carBookContainer">
+            <CarInfo bookingItem={bookingItem} />
+            <CarBooking />
+          </div>
         </div>
       );
     }

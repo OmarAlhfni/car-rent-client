@@ -3,28 +3,33 @@
   /* height: 140vh; */
   background: #f6f6f6;
   padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 .subTitle {
-  width: 50%;
+  /* width: 50%; */
   margin: auto;
   color: #777;
 }
 
-.carsdiv {
-  width: 55%;
+.carsClassificationBox {
   margin: auto;
-  padding: 30px 50px;
+  padding: 30px 5px;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .carType {
   border-radius: 0.4em;
-  /* width: 100px; */
+  min-width: 130px;
   background: #f6f6f6;
   padding: 15px 20px;
+  margin: 5px;
   border: 1px solid #f6f6f6;
   box-shadow: 1px 2px 10px -5px #7777776b;
   color: #6a52fe;
@@ -34,19 +39,23 @@
   cursor: pointer;
 }
 
-.carType:hover {
+.carType:hover,
+.selectCarType {
   background: #6a52fef0;
   color: #fff;
   opacity: 0.8;
 }
 
 .carsSlider {
-  width: 70%;
+  width: 80%;
   margin: auto;
+  /* border: 3px solid #333 ; */
 }
 
 /* Card */
 .card {
+  /* border: 3px solid #333 ; */
+  min-width: 300px;
   display: flex;
   background: #fff;
   flex-direction: column;
@@ -58,6 +67,7 @@
   padding-top: 10px;
   border-bottom-right-radius: 2em;
   overflow: hidden;
+  position: relative;
 }
 
 .card:hover {
@@ -66,7 +76,7 @@
 
 .cardLike {
   position: relative;
-  margin-bottom: 10px;
+  margin: 0px;
 }
 
 .cardLike > i {
@@ -80,25 +90,36 @@
   width: 80px;
   position: absolute;
   left: 0px;
-  margin: 5px;
   color: #ff0000;
   font-weight: bold;
   font-size: 18px;
 }
 
-.cardInfo{
+/* .cardInfo {
   padding-bottom: 10px;
-}
+} */
 .card > img {
   margin-top: 30px;
   width: 100%;
-  height: 150px;
+  height: 200px;
   padding-right: 10px;
 }
 
-.cardP {
-  padding: 0px;
+.carTypeCard {
+  padding: 2px 10px;
   margin: 0px;
+  position: absolute;
+  background: #000000;
+  border-radius: 22px;
+  color: #fff;
+}
+
+.offerDate {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 25px;
 }
 
 .cardPriceBook {
@@ -108,13 +129,33 @@
 }
 
 .cardPrice {
-  font-weight: 500;
+  width: 50%;
+
+  /* display: flex;
+  align-items: center; */
+}
+
+.cardPrice > div {
+  padding: 5px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+.cardPrice > div > p {
+  padding: 0;
+  margin: 0;
+  font-weight: 700;
+  color: #6a52fe;
 }
 
 .cardBook {
-  width: 130px;
+  width: 50%;
   text-align: center;
-  padding-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding-top: 15px; */
   background: #6a52fe;
   /* box-shadow: inset 10px 32px 30px -20px rgba(0, 0, 0, 0.75); */
   color: #fff;
@@ -126,12 +167,18 @@
 }
 
 .carsNumber {
-  text-align: left;
-  margin-left: 200px;
+  text-align: center;
+  margin-top: 40px;
 }
 
 .carsNumber > span {
   color: #6a52fe;
   font-size: 18px;
   font-weight: bold;
+}
+
+@media only screen and (max-width: 576px) {
+  .carsSlider {
+    width: 100%;
+  }
 }

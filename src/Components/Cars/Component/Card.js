@@ -21,24 +21,23 @@ const Card = ({ el, isAuth, setBookingItem }) => {
   }
 
   return (
-    <div className="card">
-      {like()}
-{/* imgg */}
-      <img src={el.photo} alt="bmw" />
-      <div className="cardInfo">
-        <h3> {el.name} </h3>
+    <Link to="/carBook">
+      <div className="card">
 
-        <p className="cardP"> model: {el.model} </p>
-        <p className="cardP"> type: {el.car_model.car_type} </p>
-        <p className="cardP"> transmissions: {el.transmissions} </p>
+        {like()}
+        <img src={el.photo} alt="car image" />
+        <div>
+          <h3> {el.name} </h3>
+        </div>
+        <p className="carTypeCard"> {el.car_model.car_type} </p>
+        <div className="cardPriceBook">
+          <p className="cardPrice">price/Day ${el.price} </p>
+          <Link to="/carBook" className="cardBook" onClick={handleBooking}>
+            Book now
+          </Link>
+        </div>
       </div>
-      <div className="cardPriceBook">
-        <p className="cardPrice">price/Day ${el.price} </p>
-        <Link to="/carBook" className="cardBook" onClick={handleBooking}>
-          Book now
-        </Link>
-      </div>
-    </div>
+    </Link>
   );
 };
 export default Card;

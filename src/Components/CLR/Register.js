@@ -68,68 +68,71 @@ class Register extends Component {
     const { name, address, email, password, success } = this.state;
     const { operationSuccess } = this.props;
     return (
-      <div className="contentForms">
-        <form className="formInputs" onSubmit={this._onSubmit}>
-          <h2 className="formInputsTitle">register</h2>
+      <div className="c-l-r-content">
+        <div className="contentContainer">
 
-          <label className="formInputsLab">Your E-mail</label>
-          <input
-            className="formInput"
-            name="email"
-            onChange={this._onChang}
-            value={email}
-            type="email"
-            required
+          <form className="contentForm" onSubmit={this._onSubmit}>
+            <h2 className="contentFormTitle">register</h2>
+
+            <label className="contentFormLab">Your E-mail</label>
+            <input
+              className="formInput"
+              name="email"
+              onChange={this._onChang}
+              value={email}
+              type="email"
+              required
+            />
+            {isValidEmail(email)}
+
+            <label className="contentFormLab">Username</label>
+            <input
+              className="formInput"
+              name="name"
+              onChange={this._onChang}
+              value={name}
+              type="String"
+              required
+            />
+            {isValidName(name)}
+
+            <label className="contentFormLab">Password</label>
+            <input
+              className="formInput"
+              name="password"
+              onChange={this._onChang}
+              value={password}
+              type="password"
+              required
+            />
+            {isValidPassword(password)}
+
+            <label className="contentFormLab">Address</label>
+            <input
+              className="formInput"
+              name="address"
+              onChange={this._onChang}
+              value={address}
+              type="String"
+              required
+            />
+
+            <label className="contentFormLab">Photo</label>
+            <input type="file" name="photo" onChange={this._onChang} />
+
+            <p className="contentFormLab">Forget password ?</p>
+
+            <button className="contentFormBtn"> Signup </button>
+
+            {operationSuccess(success)}
+          </form>
+
+          <img
+            src="./img/register.png"
+            alt="img register"
+            className="contentImg"
           />
-          {isValidEmail(email)}
-
-          <label className="formInputsLab">Username</label>
-          <input
-            className="formInput"
-            name="name"
-            onChange={this._onChang}
-            value={name}
-            type="String"
-            required
-          />
-          {isValidName(name)}
-
-          <label className="formInputsLab">Password</label>
-          <input
-            className="formInput"
-            name="password"
-            onChange={this._onChang}
-            value={password}
-            type="password"
-            required
-          />
-          {isValidPassword(password)}
-
-          <label className="formInputsLab">Address</label>
-          <input
-            className="formInput"
-            name="address"
-            onChange={this._onChang}
-            value={address}
-            type="String"
-            required
-          />
-
-          <label className="formInputsLab">Photo</label>
-          <input type="file" name="photo" onChange={this._onChang} />
-
-          <p className="formInputsLab">Forget password ?</p>
-
-          <button className="formInputsBtn"> Signup </button>
-
-          {operationSuccess(success)}
-        </form>
-
-        <img
-          src="./img/register.png"
-          alt="img register"
-          className="contentFormsImg"
-        />
+        </div>
       </div>
     );
   }

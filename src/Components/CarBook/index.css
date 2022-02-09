@@ -1,58 +1,99 @@
 .carBook {
   /* width: 70%;
   margin: 50px auto; */
-  display: flex;
+  /* display: flex; */
   width: 100%;
+  /* border: 3px solid salmon; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carBookContainer {
+  width: 80%;
+  /* border: 3px solid #333; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* ***********************  Car Info  *********************** */
-.carInfo {
-  width: 40%;
-  background: #e6e6e6;
+
+.carInfoBox {
+  display: flex;
+  width: 80%;
+  height: 445px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-shadow: -12px 7px 6px -30px #9d9ba5, 0px 7px 21px -8px #9d9ba5;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.carInfoGallery {
+  height: 100%;
+  width: 20%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 5px 5px 15px 17px;
-  border-bottom-right-radius: 80%;
-  border-top-right-radius: 15px;
-  border-top-left-radius: 15px;
-  box-shadow: 4px 5px 20px -10px #6a52fe;
-  overflow: hidden;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 0;
+}
+
+.carInfoGallery > div {
+  height: 120px;
+  width: 120px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  border: 1px solid #a2a6ac;
+  border-radius: 2px;
+  padding: 3px;
+}
+.carInfoGallery > div:hover {
+  box-shadow: -12px 7px 6px -30px #9d9ba5, 0px 7px 21px -8px #9d9ba5;
+}
+
+.carGalleryImage {
+  width: 100%;
+  height: 100%;
+}
+
+.carInfo {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .carInfoImg {
   width: 100%;
   height: 300px;
-  padding: 15px;
-}
-
-.carInfoInfo {
-  /* width: 50%; */
-  padding: 0 50px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
 }
 
 .carInfoTitle {
-  width: 100%;
-  color: #6a52fe;
+  color: #696969;
   text-align: center;
   text-transform: capitalize;
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
 
-.carInfoInfo > p {
-  margin: 0;
-  padding: 5px;
-  width: 50%;
+.carInfoInfo {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .carInfoprice {
-  color: #6a52fe;
+  color: #607d8b;
   font-weight: bold;
   font-size: 20px;
-  width: 100%;
   display: block;
 }
 
@@ -62,8 +103,8 @@
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 6px 30px;
-  width: 60%;
+  padding: 50px 5px;
+  width: 80%;
 }
 
 .CBFull {
@@ -125,10 +166,54 @@
   padding: 10px;
   border: none;
   background: #6a52fe;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: bold;
   color: #fff;
   border-radius: 0.2em;
   margin: 20px 0;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  .carInfoBox {
+    flex-direction: column;
+    width: 100%;
+  }
+  .carInfoGallery {
+    flex-direction: row;
+    width: 100%;
+    padding: 5px;
+  }
+
+  .carInfoBox {
+    height: 570px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .carBookContainer {
+    width: 90%;
+  }
+  .carInfo {
+    width: 100%;
+  }
+  .carInfoImg {
+    width: 100%;
+  }
+  .carInfoInfo {
+    flex-direction: column;
+  }
+
+  .carBooking {
+    width: 100%;
+  }
+  .CBlabel {
+    font-size: 16px;
+  }
+  .CBInput {
+    font-size: 12px;
+  }
+  .CBBtn {
+    font-size: 16px;
+  }
 }

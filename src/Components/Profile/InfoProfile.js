@@ -14,17 +14,17 @@ class InfoProfile extends Component {
           <div className="statProfileComp">
             <div>
               <span>Favorite</span>
-              <p>10</p>
+              <p>-</p>
             </div>
             <span className="linee"></span>
             <div>
               <span>Likes</span>
-              <p>13</p>
+              <p>-</p>
             </div>
             <span className="linee"></span>
             <div>
               <span>comments</span>
-              <p>5</p>
+              <p>-</p>
             </div>
             <span className="linee"></span>
             <button className="statAdd" onClick={() => toggleShow()}>

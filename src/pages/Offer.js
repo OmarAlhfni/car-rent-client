@@ -26,7 +26,7 @@ class Offer extends Component {
 
     return (
       <div>
-        <div className="carsdiv">
+        <div className="carsClassificationBox">
           {/* {carType.map((el, index) => {
             return (
               <button className="carType" key={index}>
@@ -37,11 +37,11 @@ class Offer extends Component {
         </div>
 
         <div className="vehiclesSlider">
-          <Slider {...settings}>
+          {/* <Slider {...settings}> */}
             {offers.map((el, index) => {
               return <CardOffer el={el} key={index} />;
             })}
-          </Slider>
+          {/* </Slider> */}
         </div>
 
         <BtnScroll />

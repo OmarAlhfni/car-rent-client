@@ -19,12 +19,14 @@ class Landing extends Component {
             {/* <p className="title landSubTitle">
               search for your<span className="titleSpan"> car</span>
             </p> */}
-            {/* <form className="LandingSearch">
-              <input className="LandingSearchInp" />
-              <button className="LandingSearchBtn">
-                <i className="fas fa-search" />
-              </button>
-            </form> */}
+            <div className="boxSearch">
+              <form className="LandingSearch">
+                <input className="LandingSearchInp" placeholder="search for your car" />
+                <button className="LandingSearchBtn">
+                  <i className="fas fa-search" />
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </div>

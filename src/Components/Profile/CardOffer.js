@@ -8,11 +8,11 @@ const CardOffer = ({ el, handleDelete }) => {
 
       <div>
         <h3>{el.car.name} </h3>
-        <p> model: {el.car.model}</p>
-        <p> price: {el.new_price}</p>
-        <p> start: {el.start.substring(0, 10)}</p>
-        <p> end: {el.end_to.substring(0, 10)}</p>
-        
+        {/* <p> model: {el.car.model}</p> */}
+        <p> <b>price:</b> {el.new_price}</p>
+        <p> <b>start:</b> {el.start.substring(0, 10)}</p>
+        <p> <b>end:</b> {el.end_to.substring(0, 10)}</p>
+
       </div>
 
       {/* <div className="myCardFooter">
@@ -24,13 +24,13 @@ const CardOffer = ({ el, handleDelete }) => {
         >
           Edit
         </button> */}
-        <button
-          className="cardOfferBtn danger"
-          data-id={el.id_offer}
-          onClick={handleDelete}
-        >
-          Delet
-        </button>
+      <button
+        className="cardOfferBtn danger"
+        data-id={el.id_offer}
+        onClick={handleDelete}
+      >
+        Delet
+      </button>
       {/* </div> */}
     </div>
   );

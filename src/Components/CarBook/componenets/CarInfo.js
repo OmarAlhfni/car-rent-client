@@ -1,25 +1,37 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const CarInfo = ({ bookingItem }) => {
-  return (
-    <div className="carInfo">
-      <img
-      // imgg
-        src={bookingItem.photo}
-        alt="carInfo"
-        className="carInfoImg"
-      />
-      <div className="carInfoInfo">
-        <h2 className="carInfoTitle">{bookingItem.name}</h2>
-        <p>model: {bookingItem.model}</p>
-        <p>price: {bookingItem.price}</p>
-        <p>car type: {bookingItem.id_type}</p>
-        <p>id_color: {bookingItem.id_color}</p>
-        <p>id_category: {bookingItem.id_category}</p>
-        <p>available: {bookingItem.available}</p>
-        <p>Car Transmissions: {bookingItem.transmissions}</p>
+  const [firstImage, setFirstImage] = useState('');
 
-        <h2 className="carInfoprice">Price/Day $75</h2>
+  useEffect(() => {
+    setFirstImage(bookingItem.photo)
+  }, [])
+  return (
+    <div className="carInfoBox">
+
+      <div className="carInfo">
+        <img
+          src={firstImage}
+          alt="carInfo"
+          className="carInfoImg"
+        />
+        <div className="carInfoInfo">
+          <h2 className="carInfoTitle">{bookingItem.name}</h2>
+
+          <h2 className="carInfoprice">Price/Day $75</h2>
+        </div>
+      </div>
+      
+      <div className="carInfoGallery">
+        {bookingItem.gallery_photo.map(el =>
+          <div onClick={() => setFirstImage(el)}>
+            <img
+              src={el}
+              alt="car image"
+              className="carGalleryImage"
+            />
+          </div>
+        )}
       </div>
     </div>
   );

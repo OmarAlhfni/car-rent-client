@@ -2,8 +2,21 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  padding: 15px;
   background: #f6f6f6;
+  position: relative;
+}
+.nav-bars-icon {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  font-size: 25px;
+  color: #000;
+  display: none;
+  cursor: pointer;
+}
+
+.navLogoLink {
+  padding: 15px 0;
 }
 
 .navLogo {
@@ -12,9 +25,15 @@
   cursor: pointer;
 }
 
+.containerNavUL {
+  display: flex;
+  padding: 15px 0;
+  align-items: center;
+}
+
 .navUL {
   list-style-type: none;
-  margin-left: 200px;
+  /* margin-left: 200px; */
 }
 
 .navLi {
@@ -55,10 +74,67 @@
 .navLR {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .navIcon {
   padding: 15px 5px;
   color: #6a52fe;
   font-size: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+  }
+  .nav-bars-icon {
+    display: block;
+  }
+  .nav-bars-iconBarLight {
+    color: #fff;
+  }
+  .navLogoLink {
+    text-align: center;
+  }
+  .navLogoLinkBarDark {
+    background-color: #333;
+  }
+
+  .containerNavUL {
+    flex-direction: column;
+    background-color: #333;
+    display: block;
+  }
+
+  .containerNavULHidden {
+    flex-direction: column;
+    background-color: #333;
+    display: none;
+  }
+
+  .navUL {
+    margin: 10px auto;
+    padding: 0;
+  }
+  .navLi {
+    display: block;
+    margin: 5px auto;
+    text-align: center;
+  }
+  .navLR {
+    /* flex-direction: column; */
+    text-align: center;
+    justify-content: center;
+  }
+  .navRegister {
+    display: block;
+    margin: 10px auto;
+  }
+  .unLoginNavLR {
+    margin: auto;
+  }
+
+  .navIcons {
+    width: 100%;
+  }
 }

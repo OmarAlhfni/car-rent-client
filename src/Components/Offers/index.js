@@ -9,7 +9,7 @@ class Offers extends Component {
   render() {
     var settings = {
       infinite: false,
-      slidesToShow: 3,
+      slidesToShow: 2,
       slidesToScroll: 1,
     };
     const { category } = this.props;
@@ -24,13 +24,13 @@ class Offers extends Component {
         </p>
 
         <div className="offerSlider">
-          <Slider {...settings}>
+          {/* <Slider {...settings}> */}
           {category &&
-              category.map((el, index) => {
-                return <Card el={el} key={index} />;
-              })}
- 
-          </Slider>
+            category.map((el, index) => {
+              return <Card el={el} key={index} />;
+            })}
+
+          {/* </Slider> */}
         </div>
 
         <Link to="/offer">

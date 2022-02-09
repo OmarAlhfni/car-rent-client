@@ -1,8 +1,10 @@
 import axios from "axios";
 
+// const apiUrls = "http://localhost:5000";
 const apiUrls = "https://car-rentals-api.herokuapp.com";
 
-export const apiFeatchCar = () => {
+
+export const apiFetchCar = () => {
   return axios.get(apiUrls + "/v1/getcar");
 };
 
@@ -14,7 +16,7 @@ export const apiFetchCarType = () => {
   return axios.get(apiUrls + "/v1/carType");
 };
 
-export const apifetchCarByTypes = (id) => {
+export const apiFetchCarByTypes = (id) => {
   return axios.post(apiUrls + `/v1/fetchByTypes/${id}`, id);
 };
 

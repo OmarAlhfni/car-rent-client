@@ -1,4 +1,9 @@
 .vehiclesSlider {
   margin: auto 75px;
-  padding-bottom: 100px ;
+  padding-bottom: 100px;
+  /* without slider */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }

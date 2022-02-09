@@ -9,20 +9,23 @@
 
 .aboutP {
   color: #707070;
-  width: 70%;
+  width: 85%;
   margin: 1em auto;
-}
-
-.aboutService{
-    margin-top: 50px;
 }
 
 .aboutService {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  width: 89%;
-  margin: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 80%;
+  margin: 50px auto;
+}
+
+.aboutService > div {
+  padding: 10px 0;
+  width: 310px;
+  min-width: 300px;
 }
 
 .aboutServiceImg {

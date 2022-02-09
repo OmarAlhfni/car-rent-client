@@ -1,8 +1,8 @@
 import {
-  apiFeatchCar,
+  apiFetchCar,
   apiAddCar,
   apiFetchCarType,
-  apifetchCarByTypes,
+  apiFetchCarByTypes,
   apiFetchCategory,
   apiFetchMyCars,
   apiFetchOffer,
@@ -31,9 +31,9 @@ import { apiFetchOwner } from "../api/owner";
 export const fetchCar = () => {
   return async (dispatch) => {
     try {
-      const { data } = await apiFeatchCar();
+      const { data } = await apiFetchCar();
       dispatch({ type: FEATCH_CARS, payload: data.cars });
-    } catch (e) {}
+    } catch (e) { }
   };
 };
 
@@ -64,7 +64,7 @@ export const fetchCarType = () => {
 export const fetchCarByType = (id) => {
   return async (dispatch) => {
     try {
-      const { data } = await apifetchCarByTypes(id);
+      const { data } = await apiFetchCarByTypes(id);
       dispatch({ type: FETCH_BY_TYPE, payload: data.car });
     } catch (e) {
       console.log(e);
@@ -76,7 +76,7 @@ export const fetchCarByType = (id) => {
 export const fetchCarByTypeToVehicles = (id) => {
   return async (dispatch) => {
     try {
-      const { data } = await apifetchCarByTypes(id);
+      const { data } = await apiFetchCarByTypes(id);
       dispatch({ type: FETCH_BY_TYPE_To_V, payload: data.car });
     } catch (e) {
       console.log(e);
@@ -123,7 +123,7 @@ export const fetchOffer = () => {
         data: { offer },
       } = await apiFetchOffer();
       dispatch({ type: FETCH_OFFER, payload: offer });
-    } catch (e) {}
+    } catch (e) { }
   };
 };
 
@@ -168,7 +168,7 @@ export const fetchMyOffer = () => {
         data: { owner },
       } = await apiFetchOwner();
 
-      
+
       const {
         data: { offer },
       } = await apiFetchMyOffer(owner.id);
