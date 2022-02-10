@@ -128,7 +128,7 @@
   }
   .navRegister {
     display: block;
-    margin: 10px auto;
+    /* margin: 10px auto; */
   }
   .unLoginNavLR {
     margin: auto;
